@@ -1,16 +1,43 @@
-# Fees Management System
+# 💰 Fees Management System
 
-A comprehensive desktop application for managing student fees at **Vidyalankar Polytechnic**. This system provides a user-friendly interface for recording, tracking, and managing fee payments with receipt generation capabilities.
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Prem-Hanchate/Fees-Management)
+[![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)](https://www.oracle.com/java/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![NetBeans](https://img.shields.io/badge/IDE-NetBeans-red.svg)](https://netbeans.apache.org/)
+
+A comprehensive, professional-grade desktop application for managing student fees at **Vidyalankar Polytechnic**. This system provides a user-friendly interface for recording, tracking, and managing fee payments with advanced features like receipt generation, GST calculation, and comprehensive reporting.
 
 ## 📋 Project Overview
 
-**Developer:** Prem Hanchate  
-**Project Type:** Micro-Project (Advanced Java Programming)  
-**Institution:** Vidyalankar Polytechnic  
-**Platform:** Java Swing Desktop Application  
-**Database:** Apache Derby (Embedded)
+| Property | Details |
+|----------|---------|
+| **Developer** | Prem Hanchate |
+| **Version** | 2.0.0 |
+| **Project Type** | Micro-Project (Advanced Java Programming) |
+| **Institution** | Vidyalankar Polytechnic |
+| **Platform** | Java Swing Desktop Application |
+| **Database** | Apache Derby (Embedded) |
+| **License** | MIT License |
 
 ## ✨ Features
+
+### 🎯 Version 2.0 Enhancements
+
+#### 🔧 **Enhanced Architecture**
+- **Improved Database Connection Manager** with connection pooling and error handling
+- **Configuration Management System** for centralized settings
+- **Comprehensive Utility Library** for common operations
+- **Professional logging and debugging** capabilities
+- **Better error handling** with user-friendly messages
+
+#### 📝 **New Features**
+- **Advanced validation** for all inputs (email, phone, names, amounts)
+- **Configurable GST rates** through properties file
+- **Enhanced receipt numbering** with customizable prefix
+- **Audit logging** for tracking all operations
+- **Multiple payment methods** support (Cash, Cheque, DD, Card, UPI, Net Banking)
+- **Course master data** management
+- **User role management** (Admin/User)
 
 ### 🔐 User Authentication
 - **Login System**: Secure user authentication with username and password
@@ -45,40 +72,66 @@ A comprehensive desktop application for managing student fees at **Vidyalankar P
 ```
 fees_management_system/
 │
-├── Login.java                    # Login screen and authentication
-├── Signup_Page.java              # User registration
-├── home.java                     # Dashboard/Home screen
-├── Addfees.java                  # Add new fee record
-├── Editfees.java                 # Edit existing fee records
-├── PrintReciept.java             # Print fee receipts
-├── DBConnection.java             # Database connection handler
-├── NumberToWordsConverter.java   # Utility for number to words conversion
-├── Fees_Management_System.java   # Main entry point
+├── Core Application Files
+│   ├── Login.java                      # Enhanced login with validation
+│   ├── Signup_Page.java                # User registration
+│   ├── home.java                       # Dashboard/Home screen
+│   ├── Addfees.java                    # Add fee records
+│   ├── Editfees.java                   # Edit fee records
+│   ├── PrintReciept.java              # Receipt generation and printing
+│   ├── Fees_Management_System.java    # Main entry point
 │
-├── Login.form                    # NetBeans GUI form files
-├── home.form
-├── Addfees.form
-├── Editfees.form
-├── PrintReciept.form
+├── Enhanced Core Components (New in v2.0)
+│   ├── DBConnection.java              # Enhanced database connection manager
+│   ├── ConfigManager.java             # Configuration management system
+│   ├── AppUtils.java                  # Comprehensive utility library
+│   ├── NumberToWordsConverter.java    # Amount to words conversion
 │
-└── images/                       # Application resources
-    ├── vp_logo.png
-    ├── plus.png
-    ├── edit.png
-    ├── login.png
-    ├── logout.png
-    ├── printer-.png
-    └── [other UI icons]
+├── Configuration & Setup
+│   ├── config.properties              # Application configuration
+│   ├── database_setup.sql             # Complete database setup script
+│   ├── .gitignore                     # Git ignore rules
+│
+├── Documentation
+│   ├── README.md                      # This file
+│   ├── CHANGELOG.md                   # Version history
+│   ├── CONTRIBUTING.md                # Contribution guidelines
+│   ├── LICENSE                        # MIT License
+│
+├── NetBeans Forms
+│   ├── Login.form
+│   ├── home.form
+│   ├── Addfees.form
+│   ├── Editfees.form
+│   ├── PrintReciept.form
+│
+└── Resources
+    └── images/                        # UI icons and images
+        ├── vp_logo.png
+        ├── plus.png
+        ├── edit.png
+        └── [30+ UI icons]
 ```
 
 ## 🛠️ Technology Stack
 
-- **Programming Language:** Java (JDK 8 or higher)
-- **GUI Framework:** Java Swing with NetBeans Form Designer
-- **Database:** Apache Derby (Embedded Database)
-- **JDBC Driver:** `org.apache.derby.jdbc.EmbeddedDriver`
-- **IDE:** NetBeans IDE (recommended)
-- **Layout Manager:** NetBeans AbsoluteLayout
+| Component | Technology | Version |
+|-----------|-----------|---------|
+| **Language** | Java | 8+ |
+| **GUI Framework** | Java Swing with NetBeans Form Designer | - |
+| **Database** | Apache Derby (Embedded) | 10.14+ |
+| **JDBC Driver** | `org.apache.derby.jdbc.EmbeddedDriver` | - |
+| **IDE** | NetBeans IDE (recommended) | 8.0+ |
+| **Layout** | NetBeans AbsoluteLayout | - |
+| **Build Tool** | NetBeans Ant / Maven (optional) | - |
+| **Version Control** | Git & GitHub | - |
+
+### New in Version 2.0
+- ✅ Singleton Design Pattern (Database & Configuration)
+- ✅ Properties-based Configuration Management
+- ✅ Advanced Logging System (Java Util Logging)
+- ✅ Comprehensive Input Validation
+- ✅ Enhanced Error Handling
 
 ## 📦 Prerequisites
 
@@ -118,40 +171,34 @@ fees_management_system/
 
 4. **Create Database Tables**
    
-   Run the following SQL scripts in Derby database:
+   Use the enhanced database setup script provided:
 
-   **Signup Table:**
+   **Option A: Using NetBeans SQL Editor**
+   - Open `database_setup.sql` in NetBeans
+   - Execute the script section by section
+
+   **Option B: Using ij tool**
    ```sql
-   CREATE TABLE signup (
-       id INTEGER PRIMARY KEY,
-       firstname VARCHAR(100),
-       lastname VARCHAR(100),
-       username VARCHAR(100) UNIQUE,
-       password VARCHAR(100),
-       contact VARCHAR(20)
-   )
+   -- Connect to database
+   connect 'jdbc:derby://localhost:1527/fee_management;user=root;password=root';
+   
+   -- Run the setup script
+   run 'database_setup.sql';
    ```
 
-   **Fees Details Table:**
-   ```sql
-   CREATE TABLE fees_details (
-       reciept_no INTEGER PRIMARY KEY,
-       received_from VARCHAR(200),
-       payment_mode VARCHAR(50),
-       cheque_no VARCHAR(50),
-       bank_name VARCHAR(100),
-       dd_no VARCHAR(50),
-       course_name VARCHAR(200),
-       total_amount FLOAT,
-       initial_amount FLOAT,
-       cgst FLOAT,
-       sgst FLOAT,
-       amount_in_words VARCHAR(500),
-       remarks VARCHAR(500),
-       year_1 FLOAT,
-       year_2 FLOAT
-   )
-   ```
+   The script will create:
+   - ✅ Enhanced `signup` table with validation constraints
+   - ✅ Improved `fees_details` table with additional fields
+   - ✅ New `courses` master table
+   - ✅ New `payment_methods` table
+   - ✅ New `audit_log` table for tracking
+   - ✅ Useful views for reporting
+   - ✅ Sample data (admin user and courses)
+   - ✅ Database indexes for performance
+
+   **Default Admin Credentials:**
+   - Username: `admin`
+   - Password: `admin123`
 
 5. **Start Apache Derby Server**
    - In NetBeans Services → Databases
@@ -339,20 +386,104 @@ Solution: Stop existing Derby server or change port in DBConnection.java
 
 ## 🎯 Future Enhancements
 
-- [ ] Add reports generation (PDF/Excel)
-- [ ] Fee payment reminder system
-- [ ] Student database integration
-- [ ] Multi-user role management (Admin, Accountant)
-- [ ] Dashboard with analytics
-- [ ] Backup and restore functionality
-- [ ] Email receipt feature
-- [ ] Advanced search and filter options
-- [ ] Payment history tracking
-- [ ] Installment payment support
+### Version 2.1 (Planned)
+- [ ] PDF export for receipts using iText library
+- [ ] Email notification system with JavaMail API
+- [ ] Advanced search and filter with multiple criteria
+- [ ] Payment reminder system
+- [ ] Bulk operations (import/export)
+- [ ] Data validation improvements
+
+### Version 2.2 (Planned)
+- [ ] Analytics dashboard with charts (JFreeChart)
+- [ ] Comprehensive report generation (daily/monthly/yearly)
+- [ ] Excel export functionality (Apache POI)
+- [ ] Automated database backup system
+- [ ] Multi-user role management with permissions
+- [ ] SMS notifications integration
+
+### Version 3.0 (Future)
+- [ ] Web-based version using Spring Boot
+- [ ] RESTful API for mobile apps
+- [ ] Mobile application (Android/iOS)
+- [ ] Payment gateway integration (Razorpay/PayU)
+- [ ] Cloud database support (MySQL/PostgreSQL)
+- [ ] Real-time notifications with WebSocket
+- [ ] Microservices architecture
+
+## 📚 Additional Resources
+
+### Documentation Files
+
+| File | Description |
+|------|-------------|
+| `README.md` | Complete project documentation (this file) |
+| `CHANGELOG.md` | Version history and release notes |
+| `CONTRIBUTING.md` | Guidelines for contributors |
+| `LICENSE` | MIT License details |
+| `database_setup.sql` | Complete database setup script |
+| `config.properties` | Application configuration |
+
+### Key Classes Documentation
+
+#### DBConnection.java
+Enhanced database connection manager with:
+- Singleton pattern for resource management
+- Connection validation and testing
+- Safe resource cleanup methods
+- Comprehensive error handling
+- Logging capabilities
+
+#### ConfigManager.java
+Configuration management system with:
+- Properties file support
+- Type-safe getters for all data types
+- Default configuration fallback
+- Runtime configuration reload
+- Convenience methods for common settings
+
+#### AppUtils.java
+Comprehensive utility library providing:
+- Date/time formatting utilities
+- Currency and number formatting
+- Input validation (email, phone, name, etc.)
+- UI helper methods (dialogs, messages)
+- String manipulation utilities
+- GST calculation helpers
+- Receipt number generation
+
+### Database Schema
+
+For complete database schema including:
+- Table structures with constraints
+- Indexes for performance
+- Useful views for reporting
+- Sample data scripts
+
+Please refer to `database_setup.sql`
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+- How to report bugs
+- How to suggest enhancements
+- Code style guidelines
+- Pull request process
+- Areas for contribution
+
+## 📝 Version History
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed version history and release notes.
 
 ## 📝 License
 
-This is an educational project developed as part of Advanced Java Programming coursework.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Academic Integrity Notice:** Students using this code must provide proper attribution. Use as a learning reference, not as a direct submission.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## 👨‍💻 Developer
 
@@ -360,16 +491,42 @@ This is an educational project developed as part of Advanced Java Programming co
 Vidyalankar Polytechnic  
 Advanced Java Programming - Micro Project
 
-## 🤝 Contributing
+📧 Contact: Via GitHub Issues  
+🔗 Repository: [github.com/Prem-Hanchate/Fees-Management](https://github.com/Prem-Hanchate/Fees-Management)
 
-This is an academic project. For suggestions or improvements, please contact the developer.
+## 🙏 Acknowledgments
+
+- Vidyalankar Polytechnic for project guidance
+- NetBeans IDE team for excellent development tools
+- Apache Derby team for the embedded database
+- Java Swing community for UI resources
+- All contributors and supporters
 
 ## 📞 Support
 
-For any queries or issues related to this project, please contact:
-- Institution: Vidyalankar Polytechnic
-- Project Type: AJP Micro-Project
+For any queries or issues:
+1. Check the [Documentation](#-additional-resources)
+2. Review [Troubleshooting](#-troubleshooting) section
+3. Search [existing issues](https://github.com/Prem-Hanchate/Fees-Management/issues)
+4. Create a [new issue](https://github.com/Prem-Hanchate/Fees-Management/issues/new) if needed
+
+## ⭐ Show Your Support
+
+If you find this project useful:
+- ⭐ Star the repository
+- 🐛 Report bugs
+- 💡 Suggest new features
+- 🤝 Contribute code improvements
+- 📢 Share with others
 
 ---
 
-**Note:** This application is designed for educational purposes and demonstrates Java Swing GUI development, database connectivity, and transaction management concepts.
+<div align="center">
+
+**Built with ❤️ for Education**
+
+**Version 2.0.0** | **November 2025**
+
+[Report Bug](https://github.com/Prem-Hanchate/Fees-Management/issues) · [Request Feature](https://github.com/Prem-Hanchate/Fees-Management/issues) · [View Documentation](README.md)
+
+</div>

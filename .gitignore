@@ -1,0 +1,160 @@
+# Fees Management System - .gitignore
+# Author: Prem Hanchate
+
+# ========================================
+# Java Compiled Files
+# ========================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# ========================================
+# NetBeans Specific
+# ========================================
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+build.xml
+manifest.mf
+
+# ========================================
+# IDE Files
+# ========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# ========================================
+# Database Files
+# ========================================
+# Derby Database
+derby.log
+*.lck
+*.properties.bak
+fee_management/
+
+# Database Backup
+*.db
+*.sqlite
+
+# ========================================
+# Log Files
+# ========================================
+*.log
+logs/
+*.log.*
+
+# ========================================
+# Backup Files
+# ========================================
+backups/
+*.bak
+*.backup
+*.tmp
+*~
+
+# ========================================
+# OS Specific Files
+# ========================================
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# ========================================
+# Package Files
+# ========================================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ========================================
+# Application Specific
+# ========================================
+# User uploaded files
+uploads/
+temp/
+cache/
+
+# Configuration (if contains sensitive data)
+# Uncomment if config.properties contains passwords
+# config.properties
+
+# Reports and exports
+reports/
+exports/
+*.pdf
+*.xlsx
+*.csv
+
+# ========================================
+# Build and Dependencies
+# ========================================
+target/
+lib/
+dependency-reduced-pom.xml
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# ========================================
+# Test Coverage
+# ========================================
+coverage/
+*.gcov
+*.gcda
+*.gcno
+
+# ========================================
+# Documentation Build
+# ========================================
+docs/_build/
+site/
+
+# ========================================
+# Miscellaneous
+# ========================================
+*.swp
+*.swo
+.env
+.env.local
+node_modules/
